@@ -1,0 +1,14 @@
+.create-news {
+    margin: 50px;
+    padding: 25px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    p {
+        color: black !important;
+    }
+}
