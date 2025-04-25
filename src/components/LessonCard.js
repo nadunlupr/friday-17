@@ -2,6 +2,7 @@ import { Component } from 'react';
 import axios from 'axios';
 import loaderImg from '../assets/images/loader.gif';
 import { Link } from 'react-router';
+import NavigatorHOC from './shared/NavigatorHOC';
 
 class LessonCard extends Component {
     constructor(props) {
@@ -14,7 +15,8 @@ class LessonCard extends Component {
     render() {
         const {
             name = "",
-            description
+            description,
+            navigate,
         } = this.props;
         return (
             <div className="lesson-card">
@@ -38,6 +40,7 @@ class LessonCard extends Component {
                                         {this.state.description}
                                     </p>
                                     <Link to="/lesson">Go to lesson</Link>
+                                    <button onClick={() => navigate('/lesson')} >Navigate</button>
                                 </div> :
                                 <div>
                                     <img src={loaderImg} width="40px" alt="loading..."/>
@@ -79,4 +82,4 @@ class LessonCard extends Component {
 
 }
 
-export default LessonCard;
+export default NavigatorHOC(LessonCard);
