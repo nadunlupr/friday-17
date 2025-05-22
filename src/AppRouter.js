@@ -5,6 +5,7 @@ import LessonDetails from './components/LessonDetails';
 import CreateNews from './components/create-news/CreateNews';
 import SuccessPage from './components/shared/SuccessPage';
 import Home from './components/home/Home';
+import Counter from './components/counter/Counter';
 
 class AppRouter extends Component {
     render() {
@@ -16,6 +17,7 @@ class AppRouter extends Component {
                         <Route path="lesson" element={<LessonDetails />} />
                         <Route path='news-create' element={<CreateNews />} />
                         <Route path='success/:recordId' element={<SuccessPage />} />
+                        <Route path='counter' element={<Counter />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

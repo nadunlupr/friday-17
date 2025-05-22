@@ -32,6 +32,10 @@ function getTabs() {
             title: 'Login',
             url: '/login'
         },
+        {
+            title: 'Counter',
+            url: '/counter'
+        },
     ]
 }
 
